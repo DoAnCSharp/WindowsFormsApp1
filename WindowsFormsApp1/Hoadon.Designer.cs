@@ -38,7 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThemKenhBan = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -147,7 +147,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnThemKenhBan);
             this.panel4.Controls.Add(this.comboBox2);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(15, 352);
@@ -155,14 +155,14 @@
             this.panel4.Size = new System.Drawing.Size(180, 100);
             this.panel4.TabIndex = 10;
             // 
-            // button1
+            // btnThemKenhBan
             // 
-            this.button1.Location = new System.Drawing.Point(102, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThemKenhBan.Location = new System.Drawing.Point(102, 13);
+            this.btnThemKenhBan.Name = "btnThemKenhBan";
+            this.btnThemKenhBan.Size = new System.Drawing.Size(75, 23);
+            this.btnThemKenhBan.TabIndex = 11;
+            this.btnThemKenhBan.Text = "+";
+            this.btnThemKenhBan.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -314,7 +314,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThemKenhBan;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
