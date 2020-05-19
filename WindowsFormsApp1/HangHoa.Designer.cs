@@ -32,7 +32,7 @@
             this.btnExportHangHoa = new System.Windows.Forms.Button();
             this.btnImportHangHoa = new System.Windows.Forms.Button();
             this.btnThemHangHoa = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimHangHoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThemNhomHang = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.panel6.Controls.Add(this.btnExportHangHoa);
             this.panel6.Controls.Add(this.btnImportHangHoa);
             this.panel6.Controls.Add(this.btnThemHangHoa);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.txtTimHangHoa);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Location = new System.Drawing.Point(12, 12);
             this.panel6.Name = "panel6";
@@ -84,13 +84,13 @@
             this.btnThemHangHoa.UseVisualStyleBackColor = true;
             this.btnThemHangHoa.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // txtTimHangHoa
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTimHangHoa.Location = new System.Drawing.Point(122, 9);
+            this.txtTimHangHoa.Name = "txtTimHangHoa";
+            this.txtTimHangHoa.Size = new System.Drawing.Size(352, 20);
+            this.txtTimHangHoa.TabIndex = 1;
+            this.txtTimHangHoa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -174,7 +174,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnImportHangHoa;
         private System.Windows.Forms.Button btnThemHangHoa;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimHangHoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExportHangHoa;
         private System.Windows.Forms.Panel panel1;
