@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Button btnBoqua;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnLuuNhaCungCap = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -58,12 +58,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            btnBoqua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(btnBoqua);
             this.panel1.Controls.Add(this.btnLuuNhaCungCap);
             this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.textBox11);
@@ -95,15 +96,15 @@
             this.panel1.Size = new System.Drawing.Size(788, 426);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // btnBoqua
             // 
-            this.button2.Location = new System.Drawing.Point(504, 333);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Bỏ qua";
-            this.button2.UseVisualStyleBackColor = true;
+            btnBoqua.Location = new System.Drawing.Point(504, 333);
+            btnBoqua.Name = "btnBoqua";
+            btnBoqua.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            btnBoqua.Size = new System.Drawing.Size(75, 23);
+            btnBoqua.TabIndex = 26;
+            btnBoqua.Text = "Bỏ qua";
+            btnBoqua.UseVisualStyleBackColor = true;
             // 
             // btnLuuNhaCungCap
             // 
@@ -367,7 +368,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLuuNhaCungCap;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
