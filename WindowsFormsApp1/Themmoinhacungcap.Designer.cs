@@ -43,7 +43,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaNhaCungCap = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,6 +62,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnBoqua
+            // 
+            btnBoqua.Location = new System.Drawing.Point(504, 333);
+            btnBoqua.Name = "btnBoqua";
+            btnBoqua.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            btnBoqua.Size = new System.Drawing.Size(75, 23);
+            btnBoqua.TabIndex = 26;
+            btnBoqua.Text = "Bỏ qua";
+            btnBoqua.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(btnBoqua);
@@ -77,7 +87,7 @@
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMaNhaCungCap);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -95,16 +105,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 426);
             this.panel1.TabIndex = 0;
-            // 
-            // btnBoqua
-            // 
-            btnBoqua.Location = new System.Drawing.Point(504, 333);
-            btnBoqua.Name = "btnBoqua";
-            btnBoqua.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            btnBoqua.Size = new System.Drawing.Size(75, 23);
-            btnBoqua.TabIndex = 26;
-            btnBoqua.Text = "Bỏ qua";
-            btnBoqua.UseVisualStyleBackColor = true;
             // 
             // btnLuuNhaCungCap
             // 
@@ -193,12 +193,12 @@
             this.textBox2.Size = new System.Drawing.Size(147, 20);
             this.textBox2.TabIndex = 14;
             // 
-            // textBox1
+            // txtMaNhaCungCap
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtMaNhaCungCap.Location = new System.Drawing.Point(169, 67);
+            this.txtMaNhaCungCap.Name = "txtMaNhaCungCap";
+            this.txtMaNhaCungCap.Size = new System.Drawing.Size(147, 20);
+            this.txtMaNhaCungCap.TabIndex = 13;
             // 
             // label13
             // 
@@ -380,6 +380,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaNhaCungCap;
     }
 }
