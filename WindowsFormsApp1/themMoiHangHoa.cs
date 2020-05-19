@@ -12,6 +12,9 @@ namespace WindowsFormsApp1
 {
     public partial class themMoiHangHoa : Form
     {
+        List<Object> listThuocTinh = new List<Object>();
+        List<Object> listDonVi = new List<Object>();
+
         public themMoiHangHoa()
         {
             InitializeComponent();
@@ -64,6 +67,35 @@ namespace WindowsFormsApp1
 
         private void label15_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnLuuThemHangHoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int soThuocTinh = listThuocTinh.Count;
+            int soDonVi = listDonVi.Count;
+            ComboBox thuocTinh = new System.Windows.Forms.ComboBox();
+            ComboBox giaTri = new System.Windows.Forms.ComboBox();
+
+            thuocTinh.FormattingEnabled = true;
+            thuocTinh.Location = new System.Drawing.Point(12, 61 + soThuocTinh * 30);
+            thuocTinh.Name = "comboBox2";
+            thuocTinh.Size = new System.Drawing.Size(121, 23);
+            thuocTinh.TabIndex = 2;
+            this.panel2.Controls.Add(thuocTinh);
+            giaTri.FormattingEnabled = true;
+            giaTri.Location = new System.Drawing.Point(237, 61 + soThuocTinh * 30);
+            giaTri.Name = "comboBox4";
+            giaTri.Size = new System.Drawing.Size(121, 23);
+            giaTri.TabIndex = 6;
+
+            listThuocTinh.Add(thuocTinh);
+            listThuocTinh.Add(giaTri);
 
         }
     }
