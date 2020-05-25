@@ -58,7 +58,34 @@ namespace WindowsFormsApp1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            SqlConnection con = DataConnection.Connection;
+            string sqlINSERT = "INSERT INTO Customer (Customer_Id,Account_Id,Name,Phone,Date_Of_Birth,Type,Gender,Email,Note,Status,Address) VALUES(@Customer_Id,@Account_Id,@Name,@Phone,@Date_Of_Birth,@Type,@Gender,@Email,@Note,@Status,@Address)";
+            SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+            cmd.Parameters.AddWithValue("Customer_Id", txt_MaKhachHang.Text);
+            cmd.Parameters.AddWithValue("Account_Id", "");
+            cmd.Parameters.AddWithValue("Name",txt_Name.Text);
+            cmd.Parameters.AddWithValue("Phone", txt_Phone.Text);
+            cmd.Parameters.AddWithValue("Date_Of_Birth", txt_Birthday.Text);
+            cmd.Parameters.AddWithValue("Type", txt_Type.Text);
+            cmd.Parameters.AddWithValue("Gender", rdo_Male.Text);
+            cmd.Parameters.AddWithValue("Email", txt_Email.Text);
+            cmd.Parameters.AddWithValue("Note", txt_Note.Text);
+            cmd.Parameters.AddWithValue("Status", txt_Note.Text);
+            cmd.Parameters.AddWithValue("Address", txt_Address.Text);
 
+            cmd.ExecuteNonQuery();
+            ShowCustomer();
+            this.Close();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

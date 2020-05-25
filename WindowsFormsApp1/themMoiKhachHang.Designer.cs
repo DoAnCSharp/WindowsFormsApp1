@@ -46,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.Cbo_Account_id = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.rdo_Company = new System.Windows.Forms.RadioButton();
             this.rdo_Personnal = new System.Windows.Forms.RadioButton();
@@ -98,7 +98,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btn_Add);
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.Cbo_Account_id);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.rdo_Company);
             this.panel1.Controls.Add(this.rdo_Personnal);
@@ -243,6 +243,7 @@
             this.button4.TabIndex = 112;
             this.button4.Text = "Bỏ qua";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_Add
             // 
@@ -254,13 +255,14 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // comboBox4
+            // Cbo_Account_id
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(629, 85);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(100, 23);
-            this.comboBox4.TabIndex = 110;
+            this.Cbo_Account_id.FormattingEnabled = true;
+            this.Cbo_Account_id.Location = new System.Drawing.Point(629, 85);
+            this.Cbo_Account_id.Name = "Cbo_Account_id";
+            this.Cbo_Account_id.Size = new System.Drawing.Size(100, 23);
+            this.Cbo_Account_id.TabIndex = 110;
+            this.Cbo_Account_id.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -484,7 +486,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox Cbo_Account_id;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RadioButton rdo_Company;
         private System.Windows.Forms.RadioButton rdo_Personnal;

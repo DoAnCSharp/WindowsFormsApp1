@@ -77,12 +77,79 @@ namespace WindowsFormsApp1
             cmd.Parameters.AddWithValue("Status", txtTrangthai.Text);
             cmd.ExecuteNonQuery();
             ShowAccount();
+            txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
+            txtMa.Focus();
+           
 
         }
 
-        private void btnBoqua_Click(object sender, EventArgs e)
+        private void btnCapnhat_Click(object sender, EventArgs e)
         {
+            SqlConnection con = DataConnection.Connection;
+            string sqlEdit = "UPDATE Account SET Username=@Username,Password=@Password,Phone=@Phone,Email=@Email,Note=@Note,Status=@Status WHERE Account_Id=@Account_Id";
+            SqlCommand cmd = new SqlCommand(sqlEdit, con);
+            cmd.Parameters.AddWithValue("Account_Id", txtMa.Text);
+            cmd.Parameters.AddWithValue("Username", txtTendangnhap.Text);
+            cmd.Parameters.AddWithValue("Password", txtMatkhau.Text);
+            cmd.Parameters.AddWithValue("Phone", txtDienthoai.Text);
+            cmd.Parameters.AddWithValue("Email", txtEmail.Text);
+            cmd.Parameters.AddWithValue("Note", txtGhichu.Text);
+            cmd.Parameters.AddWithValue("Status", txtTrangthai.Text);
+            cmd.ExecuteNonQuery();
+            ShowAccount();
+            txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
+            txtMa.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = DataConnection.Connection;
+            string sqlDELETE = "DELETE FROM Account WHERE Account_Id=@Account_Id";
+            SqlCommand cmd = new SqlCommand(sqlDELETE, con);
+            cmd.Parameters.AddWithValue("Account_Id", txtMa.Text);
+            cmd.Parameters.AddWithValue("Username", txtTendangnhap.Text);
+            cmd.Parameters.AddWithValue("Password", txtMatkhau.Text);
+            cmd.Parameters.AddWithValue("Phone", txtDienthoai.Text);
+            cmd.Parameters.AddWithValue("Email", txtEmail.Text);
+            cmd.Parameters.AddWithValue("Note", txtGhichu.Text);
+            cmd.Parameters.AddWithValue("Status", txtTrangthai.Text);
+            cmd.ExecuteNonQuery();
+            ShowAccount();
+            txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
+            txtMa.Focus();
 
         }
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = DataConnection.Connection;
+            string sqlTIMKIEM = "select * from Account WHERE Account_Id=@Account_Id";
+            SqlCommand cmd = new SqlCommand(sqlTIMKIEM, con);
+            cmd.Parameters.AddWithValue("Account_Id", txtMacantim.Text);
+            cmd.Parameters.AddWithValue("Username", txtTendangnhap.Text);
+            cmd.Parameters.AddWithValue("Password", txtMatkhau.Text);
+            cmd.Parameters.AddWithValue("Phone", txtDienthoai.Text);
+            cmd.Parameters.AddWithValue("Email", txtEmail.Text);
+            cmd.Parameters.AddWithValue("Note", txtGhichu.Text);
+            cmd.Parameters.AddWithValue("Status", txtTrangthai.Text);
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvAccount.DataSource = dt;
+        }
+
+        private void dgvAccount_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtMa.Text = dgvAccount.CurrentRow.Cells[0].Value.ToString();
+            txtTendangnhap.Text = dgvAccount.CurrentRow.Cells[1].Value.ToString();
+            txtMatkhau.Text = dgvAccount.CurrentRow.Cells[2].Value.ToString();
+            txtDienthoai.Text = dgvAccount.CurrentRow.Cells[3].Value.ToString();
+            txtEmail.Text = dgvAccount.CurrentRow.Cells[4].Value.ToString();
+            txtGhichu.Text = dgvAccount.CurrentRow.Cells[5].Value.ToString();
+            txtTrangthai.Text = dgvAccount.CurrentRow.Cells[6].Value.ToString();
+
+        }
+        
     }
 }
+

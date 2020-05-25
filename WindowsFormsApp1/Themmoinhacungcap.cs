@@ -54,20 +54,14 @@ namespace WindowsFormsApp1
         private void btnLuuNhaCungCap_Click(object sender, EventArgs e)
         {
             SqlConnection con = DataConnection.Connection;
-            string sqlINSERT = "INSERT INTO Customer (Customer_Id,Account_Id,Name,Phone,Date_Of_Birth,Type,Gender,Email,Note,Status,Address) VALUES(@Customer_Id,@Account_Id,@Name,@Phone,@Date_Of_Birth,@Type,@Gender,@Email,@Note,@Status,@Address)";
+            string sqlINSERT = "INSERT INTO Supplier (Supplier_Id,Name,Address,Note,Status,Phone) VALUES(@Supplier,@Name,@Address,@Note,@Status,@Phone)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
-            cmd.Parameters.AddWithValue("Customer_Id", txtMaNhaCungCap.Text);
-            cmd.Parameters.AddWithValue("Account_Id", txtNhaCungCap.Text);
-            cmd.Parameters.AddWithValue("Name", txtDiaChi.Text);
-            cmd.Parameters.AddWithValue("Phone", txtGhiChu.Text);
-            cmd.Parameters.AddWithValue("Date_Of_Birth", txtStatus.Text);
-            cmd.Parameters.AddWithValue("Type", txtDienThoai.Text);
-            cmd.Parameters.AddWithValue("Gender", txtDienThoai.Text);
-            cmd.Parameters.AddWithValue("Email", txtDienThoai.Text);
-            cmd.Parameters.AddWithValue("Note", txtDienThoai.Text);
-            cmd.Parameters.AddWithValue("Status", txtDienThoai.Text);
-            cmd.Parameters.AddWithValue("Address", txtDienThoai.Text);
-
+            cmd.Parameters.AddWithValue("Supplier", txtMaNhaCungCap.Text);
+            cmd.Parameters.AddWithValue("Name", txtNhaCungCap.Text);
+            cmd.Parameters.AddWithValue("Address", txtDiaChi.Text);
+            cmd.Parameters.AddWithValue("Note", txtGhiChu.Text);
+            cmd.Parameters.AddWithValue("Status", txtStatus.Text);
+            cmd.Parameters.AddWithValue("Phone", txtDienThoai.Text);
             cmd.ExecuteNonQuery();
             ShowSupplier();
             this.Close();
