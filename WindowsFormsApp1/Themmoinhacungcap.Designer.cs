@@ -32,17 +32,17 @@
             System.Windows.Forms.Button btnBoqua;
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLuuNhaCungCap = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtNhomNcc = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtCongty = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtChiNhanh = new System.Windows.Forms.TextBox();
+            this.txtPhuongXa = new System.Windows.Forms.TextBox();
+            this.txtKhuVuc = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtDienThoai = new System.Windows.Forms.TextBox();
+            this.txtNhaCungCap = new System.Windows.Forms.TextBox();
             this.txtMaNhaCungCap = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -71,22 +71,23 @@
             btnBoqua.TabIndex = 26;
             btnBoqua.Text = "Bỏ qua";
             btnBoqua.UseVisualStyleBackColor = true;
+            btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(btnBoqua);
             this.panel1.Controls.Add(this.btnLuuNhaCungCap);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtGhiChu);
+            this.panel1.Controls.Add(this.txtNhomNcc);
+            this.panel1.Controls.Add(this.txtStatus);
+            this.panel1.Controls.Add(this.txtCongty);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtChiNhanh);
+            this.panel1.Controls.Add(this.txtPhuongXa);
+            this.panel1.Controls.Add(this.txtKhuVuc);
+            this.panel1.Controls.Add(this.txtDiaChi);
+            this.panel1.Controls.Add(this.txtDienThoai);
+            this.panel1.Controls.Add(this.txtNhaCungCap);
             this.panel1.Controls.Add(this.txtMaNhaCungCap);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -115,83 +116,84 @@
             this.btnLuuNhaCungCap.TabIndex = 25;
             this.btnLuuNhaCungCap.Text = "Lưu";
             this.btnLuuNhaCungCap.UseVisualStyleBackColor = true;
+            this.btnLuuNhaCungCap.Click += new System.EventHandler(this.btnLuuNhaCungCap_Click);
             // 
-            // textBox12
+            // txtGhiChu
             // 
-            this.textBox12.Location = new System.Drawing.Point(446, 269);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(147, 20);
-            this.textBox12.TabIndex = 24;
+            this.txtGhiChu.Location = new System.Drawing.Point(446, 269);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(147, 20);
+            this.txtGhiChu.TabIndex = 24;
             // 
-            // textBox11
+            // txtNhomNcc
             // 
-            this.textBox11.Location = new System.Drawing.Point(446, 226);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(147, 20);
-            this.textBox11.TabIndex = 23;
+            this.txtNhomNcc.Location = new System.Drawing.Point(446, 226);
+            this.txtNhomNcc.Name = "txtNhomNcc";
+            this.txtNhomNcc.Size = new System.Drawing.Size(147, 20);
+            this.txtNhomNcc.TabIndex = 23;
             // 
-            // textBox10
+            // txtStatus
             // 
-            this.textBox10.Location = new System.Drawing.Point(446, 188);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(147, 20);
-            this.textBox10.TabIndex = 22;
+            this.txtStatus.Location = new System.Drawing.Point(446, 188);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(147, 20);
+            this.txtStatus.TabIndex = 22;
             // 
-            // textBox9
+            // txtCongty
             // 
-            this.textBox9.Location = new System.Drawing.Point(446, 147);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(147, 20);
-            this.textBox9.TabIndex = 21;
+            this.txtCongty.Location = new System.Drawing.Point(446, 147);
+            this.txtCongty.Name = "txtCongty";
+            this.txtCongty.Size = new System.Drawing.Size(147, 20);
+            this.txtCongty.TabIndex = 21;
             // 
-            // textBox8
+            // txtEmail
             // 
-            this.textBox8.Location = new System.Drawing.Point(446, 107);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(147, 20);
-            this.textBox8.TabIndex = 20;
+            this.txtEmail.Location = new System.Drawing.Point(446, 107);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(147, 20);
+            this.txtEmail.TabIndex = 20;
             // 
-            // textBox7
+            // txtChiNhanh
             // 
-            this.textBox7.Location = new System.Drawing.Point(446, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(147, 20);
-            this.textBox7.TabIndex = 19;
+            this.txtChiNhanh.Location = new System.Drawing.Point(446, 66);
+            this.txtChiNhanh.Name = "txtChiNhanh";
+            this.txtChiNhanh.Size = new System.Drawing.Size(147, 20);
+            this.txtChiNhanh.TabIndex = 19;
             // 
-            // textBox6
+            // txtPhuongXa
             // 
-            this.textBox6.Location = new System.Drawing.Point(169, 268);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 20);
-            this.textBox6.TabIndex = 18;
+            this.txtPhuongXa.Location = new System.Drawing.Point(169, 268);
+            this.txtPhuongXa.Name = "txtPhuongXa";
+            this.txtPhuongXa.Size = new System.Drawing.Size(147, 20);
+            this.txtPhuongXa.TabIndex = 18;
             // 
-            // textBox5
+            // txtKhuVuc
             // 
-            this.textBox5.Location = new System.Drawing.Point(169, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(147, 20);
-            this.textBox5.TabIndex = 17;
+            this.txtKhuVuc.Location = new System.Drawing.Point(169, 225);
+            this.txtKhuVuc.Name = "txtKhuVuc";
+            this.txtKhuVuc.Size = new System.Drawing.Size(147, 20);
+            this.txtKhuVuc.TabIndex = 17;
             // 
-            // textBox4
+            // txtDiaChi
             // 
-            this.textBox4.Location = new System.Drawing.Point(169, 187);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(147, 20);
-            this.textBox4.TabIndex = 16;
+            this.txtDiaChi.Location = new System.Drawing.Point(169, 187);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(147, 20);
+            this.txtDiaChi.TabIndex = 16;
             // 
-            // textBox3
+            // txtDienThoai
             // 
-            this.textBox3.Location = new System.Drawing.Point(169, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 20);
-            this.textBox3.TabIndex = 15;
+            this.txtDienThoai.Location = new System.Drawing.Point(169, 147);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(147, 20);
+            this.txtDienThoai.TabIndex = 15;
             // 
-            // textBox2
+            // txtNhaCungCap
             // 
-            this.textBox2.Location = new System.Drawing.Point(169, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtNhaCungCap.Location = new System.Drawing.Point(169, 106);
+            this.txtNhaCungCap.Name = "txtNhaCungCap";
+            this.txtNhaCungCap.Size = new System.Drawing.Size(147, 20);
+            this.txtNhaCungCap.TabIndex = 14;
             // 
             // txtMaNhaCungCap
             // 
@@ -226,9 +228,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(352, 188);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 15);
+            this.label11.Size = new System.Drawing.Size(47, 15);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Mã Số Thuế";
+            this.label11.Text = "Status";
             // 
             // label10
             // 
@@ -345,6 +347,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Themmoinhacungcap";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Themmoinhacungcap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -369,17 +372,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnLuuNhaCungCap;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtNhomNcc;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtCongty;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtChiNhanh;
+        private System.Windows.Forms.TextBox txtPhuongXa;
+        private System.Windows.Forms.TextBox txtKhuVuc;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtDienThoai;
+        private System.Windows.Forms.TextBox txtNhaCungCap;
         private System.Windows.Forms.TextBox txtMaNhaCungCap;
     }
 }

@@ -57,7 +57,7 @@
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.tbl_Customer = new System.Windows.Forms.DataGridView();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +65,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Customer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -357,21 +358,20 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Giới Tính";
             // 
-            // listView1
+            // tbl_Customer
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(225, 88);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(563, 594);
-            this.listView1.TabIndex = 20;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.tbl_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_Customer.Location = new System.Drawing.Point(225, 88);
+            this.tbl_Customer.Name = "tbl_Customer";
+            this.tbl_Customer.Size = new System.Drawing.Size(563, 368);
+            this.tbl_Customer.TabIndex = 20;
             // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 1005);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.tbl_Customer);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -381,6 +381,7 @@
             this.Controls.Add(this.panel6);
             this.Name = "KhachHang";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.KhachHang_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -395,6 +396,7 @@
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Customer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,6 +432,6 @@
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.DataGridView tbl_Customer;
     }
 }

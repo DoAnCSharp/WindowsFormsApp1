@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
@@ -43,19 +42,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbl_Sup = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Sup)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(220, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(563, 372);
-            this.listView1.TabIndex = 28;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // radioButton7
             // 
@@ -198,30 +190,38 @@
             this.textBox1.Size = new System.Drawing.Size(352, 20);
             this.textBox1.TabIndex = 1;
             // 
+            // tbl_Sup
+            // 
+            this.tbl_Sup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_Sup.Location = new System.Drawing.Point(220, 85);
+            this.tbl_Sup.Name = "tbl_Sup";
+            this.tbl_Sup.Size = new System.Drawing.Size(563, 289);
+            this.tbl_Sup.TabIndex = 28;
+            // 
             // Nhacungcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 583);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.tbl_Sup);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Name = "Nhacungcap";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Nhacungcap_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Sup)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
@@ -236,5 +236,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnThemNhomNhaCungCap;
+        public System.Windows.Forms.DataGridView tbl_Sup;
     }
 }

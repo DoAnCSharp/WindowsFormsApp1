@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Nhacungcap : Form
     {
+        private bool edit;
+
         public Nhacungcap()
         {
             InitializeComponent();
@@ -30,8 +33,22 @@ namespace WindowsFormsApp1
 
         private void btnThemNhaCungCap_Click(object sender, EventArgs e)
         {
-            var m = new Themmoinhacungcap();
+            var m = new Themmoinhacungcap(this);
             m.Show();
+        }
+
+        private void Nhacungcap_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = DataConnection.Connection;
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "select * from Supplier";
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter ta = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            ta.Fill(ds, "Supplier");
+            tbl_Sup.DataSource = ds.Tables["Supplier"];
+            edit = true;
+            con.Close();
         }
     }
 }

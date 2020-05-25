@@ -30,26 +30,26 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_Birthday = new System.Windows.Forms.DateTimePicker();
+            this.txt_female = new System.Windows.Forms.RadioButton();
+            this.rdo_Male = new System.Windows.Forms.RadioButton();
+            this.txt_Type = new System.Windows.Forms.TextBox();
+            this.txt_Area = new System.Windows.Forms.TextBox();
+            this.txt_Address = new System.Windows.Forms.TextBox();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
+            this.txt_Note = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.txt_MaKhachHang = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rdo_Company = new System.Windows.Forms.RadioButton();
+            this.rdo_Personnal = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -82,26 +82,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txt_Birthday);
+            this.panel1.Controls.Add(this.txt_female);
+            this.panel1.Controls.Add(this.rdo_Male);
+            this.panel1.Controls.Add(this.txt_Type);
+            this.panel1.Controls.Add(this.txt_Area);
+            this.panel1.Controls.Add(this.txt_Address);
+            this.panel1.Controls.Add(this.txt_Phone);
+            this.panel1.Controls.Add(this.txt_Note);
             this.panel1.Controls.Add(this.textBox15);
-            this.panel1.Controls.Add(this.textBox16);
+            this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.textBox18);
-            this.panel1.Controls.Add(this.textBox19);
-            this.panel1.Controls.Add(this.textBox20);
-            this.panel1.Controls.Add(this.textBox21);
+            this.panel1.Controls.Add(this.txt_Name);
+            this.panel1.Controls.Add(this.txt_MaKhachHang);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btn_Add);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton4);
+            this.panel1.Controls.Add(this.rdo_Company);
+            this.panel1.Controls.Add(this.rdo_Personnal);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label22);
@@ -124,63 +124,71 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(806, 454);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // radioButton1
+            // txt_Birthday
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(690, 117);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 19);
-            this.radioButton1.TabIndex = 119;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nữ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txt_Birthday.Location = new System.Drawing.Point(287, 160);
+            this.txt_Birthday.Name = "txt_Birthday";
+            this.txt_Birthday.Size = new System.Drawing.Size(167, 21);
+            this.txt_Birthday.TabIndex = 120;
             // 
-            // radioButton2
+            // txt_female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(629, 116);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(55, 19);
-            this.radioButton2.TabIndex = 118;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nam";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.txt_female.AutoSize = true;
+            this.txt_female.Location = new System.Drawing.Point(690, 117);
+            this.txt_female.Name = "txt_female";
+            this.txt_female.Size = new System.Drawing.Size(43, 19);
+            this.txt_female.TabIndex = 119;
+            this.txt_female.TabStop = true;
+            this.txt_female.Text = "Nữ";
+            this.txt_female.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // rdo_Male
             // 
-            this.textBox5.Location = new System.Drawing.Point(287, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 21);
-            this.textBox5.TabIndex = 117;
+            this.rdo_Male.AutoSize = true;
+            this.rdo_Male.Location = new System.Drawing.Point(629, 116);
+            this.rdo_Male.Name = "rdo_Male";
+            this.rdo_Male.Size = new System.Drawing.Size(55, 19);
+            this.rdo_Male.TabIndex = 118;
+            this.rdo_Male.TabStop = true;
+            this.rdo_Male.Text = "Nam";
+            this.rdo_Male.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txt_Type
             // 
-            this.textBox4.Location = new System.Drawing.Point(287, 214);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 21);
-            this.textBox4.TabIndex = 115;
+            this.txt_Type.Location = new System.Drawing.Point(287, 267);
+            this.txt_Type.Name = "txt_Type";
+            this.txt_Type.Size = new System.Drawing.Size(167, 21);
+            this.txt_Type.TabIndex = 117;
             // 
-            // textBox2
+            // txt_Area
             // 
-            this.textBox2.Location = new System.Drawing.Point(287, 187);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 21);
-            this.textBox2.TabIndex = 114;
+            this.txt_Area.Location = new System.Drawing.Point(287, 214);
+            this.txt_Area.Name = "txt_Area";
+            this.txt_Area.Size = new System.Drawing.Size(167, 21);
+            this.txt_Area.TabIndex = 115;
             // 
-            // textBox1
+            // txt_Address
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 21);
-            this.textBox1.TabIndex = 113;
+            this.txt_Address.Location = new System.Drawing.Point(287, 187);
+            this.txt_Address.Name = "txt_Address";
+            this.txt_Address.Size = new System.Drawing.Size(167, 21);
+            this.txt_Address.TabIndex = 114;
             // 
-            // textBox7
+            // txt_Phone
             // 
-            this.textBox7.Location = new System.Drawing.Point(629, 192);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 21);
-            this.textBox7.TabIndex = 106;
+            this.txt_Phone.Location = new System.Drawing.Point(287, 136);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(167, 21);
+            this.txt_Phone.TabIndex = 113;
+            // 
+            // txt_Note
+            // 
+            this.txt_Note.Location = new System.Drawing.Point(629, 192);
+            this.txt_Note.Name = "txt_Note";
+            this.txt_Note.Size = new System.Drawing.Size(100, 21);
+            this.txt_Note.TabIndex = 106;
             // 
             // textBox15
             // 
@@ -189,12 +197,12 @@
             this.textBox15.Size = new System.Drawing.Size(100, 21);
             this.textBox15.TabIndex = 104;
             // 
-            // textBox16
+            // txt_Email
             // 
-            this.textBox16.Location = new System.Drawing.Point(629, 140);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 21);
-            this.textBox16.TabIndex = 102;
+            this.txt_Email.Location = new System.Drawing.Point(629, 140);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(100, 21);
+            this.txt_Email.TabIndex = 102;
             // 
             // textBox18
             // 
@@ -203,26 +211,19 @@
             this.textBox18.Size = new System.Drawing.Size(167, 21);
             this.textBox18.TabIndex = 97;
             // 
-            // textBox19
+            // txt_Name
             // 
-            this.textBox19.Location = new System.Drawing.Point(287, 162);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(167, 21);
-            this.textBox19.TabIndex = 93;
+            this.txt_Name.Location = new System.Drawing.Point(287, 110);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(167, 21);
+            this.txt_Name.TabIndex = 90;
             // 
-            // textBox20
+            // txt_MaKhachHang
             // 
-            this.textBox20.Location = new System.Drawing.Point(287, 110);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(167, 21);
-            this.textBox20.TabIndex = 90;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(287, 84);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(167, 21);
-            this.textBox21.TabIndex = 88;
+            this.txt_MaKhachHang.Location = new System.Drawing.Point(287, 84);
+            this.txt_MaKhachHang.Name = "txt_MaKhachHang";
+            this.txt_MaKhachHang.Size = new System.Drawing.Size(167, 21);
+            this.txt_MaKhachHang.TabIndex = 88;
             // 
             // label6
             // 
@@ -243,14 +244,15 @@
             this.button4.Text = "Bỏ qua";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_Add
             // 
-            this.button5.Location = new System.Drawing.Point(526, 315);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 111;
-            this.button5.Text = "Lưu";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_Add.Location = new System.Drawing.Point(535, 315);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.TabIndex = 111;
+            this.btn_Add.Text = "Lưu";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // comboBox4
             // 
@@ -269,27 +271,27 @@
             this.label17.TabIndex = 109;
             this.label17.Text = "label17";
             // 
-            // radioButton3
+            // rdo_Company
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(358, 60);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(72, 19);
-            this.radioButton3.TabIndex = 108;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Công ty";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdo_Company.AutoSize = true;
+            this.rdo_Company.Location = new System.Drawing.Point(358, 60);
+            this.rdo_Company.Name = "rdo_Company";
+            this.rdo_Company.Size = new System.Drawing.Size(72, 19);
+            this.rdo_Company.TabIndex = 108;
+            this.rdo_Company.TabStop = true;
+            this.rdo_Company.Text = "Công ty";
+            this.rdo_Company.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdo_Personnal
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(287, 60);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(78, 19);
-            this.radioButton4.TabIndex = 107;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Cá nhân";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdo_Personnal.AutoSize = true;
+            this.rdo_Personnal.Location = new System.Drawing.Point(287, 60);
+            this.rdo_Personnal.Name = "rdo_Personnal";
+            this.rdo_Personnal.Size = new System.Drawing.Size(78, 19);
+            this.rdo_Personnal.TabIndex = 107;
+            this.rdo_Personnal.TabStop = true;
+            this.rdo_Personnal.Text = "Cá nhân";
+            this.rdo_Personnal.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -456,6 +458,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "themMoiKhachHang";
             this.Text = "themMoiKhachHang";
+            this.Load += new System.EventHandler(this.themMoiKhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -466,26 +469,25 @@
         #endregion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.RadioButton txt_female;
+        private System.Windows.Forms.RadioButton rdo_Male;
+        private System.Windows.Forms.TextBox txt_Type;
+        private System.Windows.Forms.TextBox txt_Area;
+        private System.Windows.Forms.TextBox txt_Address;
+        private System.Windows.Forms.TextBox txt_Phone;
+        private System.Windows.Forms.TextBox txt_Note;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txt_Name;
+        private System.Windows.Forms.TextBox txt_MaKhachHang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rdo_Company;
+        private System.Windows.Forms.RadioButton rdo_Personnal;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
@@ -502,5 +504,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DateTimePicker txt_Birthday;
     }
 }
