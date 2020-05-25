@@ -39,12 +39,16 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
             this.listViewHangHoa = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btnFind);
+            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.btnExportHangHoa);
             this.panel6.Controls.Add(this.btnImportHangHoa);
             this.panel6.Controls.Add(this.btnThemHangHoa);
@@ -88,7 +92,7 @@
             // 
             this.txtTimHangHoa.Location = new System.Drawing.Point(122, 9);
             this.txtTimHangHoa.Name = "txtTimHangHoa";
-            this.txtTimHangHoa.Size = new System.Drawing.Size(352, 20);
+            this.txtTimHangHoa.Size = new System.Drawing.Size(282, 20);
             this.txtTimHangHoa.TabIndex = 1;
             this.txtTimHangHoa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -150,6 +154,25 @@
             this.listViewHangHoa.TabIndex = 16;
             this.listViewHangHoa.UseCompatibleStateImageBehavior = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnFind
+            // 
+            this.btnFind.Location = new System.Drawing.Point(410, 9);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.TabIndex = 17;
+            this.btnFind.Text = "Tìm kiếm";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
             // Hanghoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,5 +205,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listViewHangHoa;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Button button1;
     }
 }

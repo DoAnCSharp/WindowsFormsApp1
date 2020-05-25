@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controller;
+using WindowsFormsApp1.Entities;
 
 namespace WindowsFormsApp1
 {
@@ -40,6 +42,10 @@ namespace WindowsFormsApp1
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
         }
     }
 }

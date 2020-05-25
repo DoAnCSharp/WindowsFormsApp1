@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controller;
+using WindowsFormsApp1.Entities;
 
 namespace WindowsFormsApp1
 {
     public partial class Hanghoa : Form
     {
+
+        List<Product> listProduct = new List<Product>();
         public Hanghoa()
         {
             InitializeComponent();
@@ -36,9 +40,7 @@ namespace WindowsFormsApp1
 
         private void Hanghoa_Load(object sender, EventArgs e)
         {
-            List<Entities.Product> listItem = new List<Entities.Product>();
-            listItem.Add(new Entities.Product(9, "Máy phát điện Rato R7000d B1 5.5kva-k", 4, 16000000));
-            loadListVierHangHoa(listItem);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -60,14 +62,18 @@ namespace WindowsFormsApp1
 
             foreach(Entities.Product pro in listItem)
             {
-                ListViewItem item = new ListViewItem(Convert.ToString(pro.id_product));
+                ListViewItem item = new ListViewItem(Convert.ToString(pro.product_id));
               //  item.Items.Add(Convert.ToString(pro.id_product));
                 item.SubItems.Add(Convert.ToString(pro.name));
-                item.SubItems.Add(Convert.ToString(pro.sale_price));
+                item.SubItems.Add(Convert.ToString(pro.sale_Price));
                 item.SubItems.Add(Convert.ToString(pro.quantity));
                 listViewHangHoa.Items.Add(item);
             }
 
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
         }
     }
 }
