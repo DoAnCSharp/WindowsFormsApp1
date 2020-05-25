@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Controller\ProductDAO.cs" />
     <Compile Include="Controller\ProductCtrl.cs" />
+    <Compile Include="DataConnection.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\Bill_Detail.cs" />
@@ -80,6 +81,12 @@
     <Compile Include="Entities\Shift.cs" />
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Role.cs" />
+    <Compile Include="frmAddnewusers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddnewusers.Designer.cs">
+      <DependentUpon>frmAddnewusers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="themMoiNhanVien.resx">
       <DependentUpon>themMoiNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddnewusers.resx">
+      <DependentUpon>frmAddnewusers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNhomNhaCungCap.resx">
       <DependentUpon>ThemNhomNhaCungCap.cs</DependentUpon>

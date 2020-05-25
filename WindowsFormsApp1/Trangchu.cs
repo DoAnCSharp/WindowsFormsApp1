@@ -70,5 +70,12 @@ namespace WindowsFormsApp1
             var m = new Nhacungcap();
             m.Show();
         }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+            var m = new frmAddnewusers();
+            m.Show();
+        }
     }
 }
