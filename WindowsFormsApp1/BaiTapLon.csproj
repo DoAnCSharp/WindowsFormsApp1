@@ -253,6 +253,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Picture\GD001.png" />
+    <Content Include="Picture\GD002.jpg" />
+    <Content Include="Picture\GD003.jpg" />
+    <Content Include="Picture\GD004.png" />
+    <Content Include="Picture\GD005.png" />
+    <Content Include="Picture\GD006.png" />
+    <Content Include="Picture\GD007.png" />
+    <Content Include="Picture\GD008.jpg" />
+    <Content Include="Picture\GD009.png" />
+    <Content Include="Picture\GD010.png" />
+    <Content Include="Picture\GD011.png" />
+    <Content Include="Picture\NB001.png" />
+    <Content Include="Picture\NB002.png" />
+    <Content Include="Picture\NB003.png" />
+    <Content Include="Picture\NB004.png" />
+    <Content Include="Picture\NB005.png" />
+    <Content Include="Picture\TBDCN001.png" />
+    <Content Include="Picture\TBDCN002.png" />
+    <Content Include="Picture\TBDCN003.png" />
+    <Content Include="Picture\TBDCN004.png" />
+    <Content Include="Picture\TBDCN005.jpg" />
+    <Content Include="Picture\TBDCN006.jpg" />
+    <Content Include="Picture\TBDCN007.png" />
+    <Content Include="Picture\TBDCN008.png" />
+    <Content Include="Picture\TBDCN009.jpg" />
     <Content Include="Resources\dashboard.png" />
   </ItemGroup>
   <ItemGroup>
