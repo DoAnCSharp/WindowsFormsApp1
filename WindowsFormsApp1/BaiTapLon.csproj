@@ -81,6 +81,18 @@
     <Compile Include="Entities\Shift.cs" />
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Role.cs" />
+    <Compile Include="Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddnewusers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,12 @@
     <EmbeddedResource Include="Banhang.resx">
       <DependentUpon>Banhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hanghoa.resx">
       <DependentUpon>Hanghoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +246,26 @@
       <DependentUpon>Trangchu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bill.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Controller.ProductCtrl.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Controller.ProductDAO.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Account.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Bill.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Bill_Detail.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Customer.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Department.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Employee.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Import_Bill.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Import_Detail.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Product.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Role.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Shift.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Entities.Supplier.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.QLHHVPPDataSetTableAdapters.ProductTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.QLHHVPPDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.QLHHVPPDataSetTableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
