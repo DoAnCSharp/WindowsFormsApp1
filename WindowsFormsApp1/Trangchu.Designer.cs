@@ -37,9 +37,11 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Bieudongang = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bieudotron = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnNhaCungCap = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
@@ -81,11 +83,11 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnTaiKhoan = new System.Windows.Forms.Button();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.btn_Load = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Bieudongang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bieudotron)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -106,44 +108,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
-            // Chart
+            // Bieudongang
             // 
             chartArea1.Name = "ChartArea1";
-            this.Chart.ChartAreas.Add(chartArea1);
+            this.Bieudongang.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.Chart.Legends.Add(legend1);
-            this.Chart.Location = new System.Drawing.Point(246, 289);
-            this.Chart.Name = "Chart";
-            this.Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.Bieudongang.Legends.Add(legend1);
+            this.Bieudongang.Location = new System.Drawing.Point(246, 289);
+            this.Bieudongang.Name = "Bieudongang";
+            this.Bieudongang.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.Chart.Series.Add(series1);
-            this.Chart.Size = new System.Drawing.Size(422, 243);
-            this.Chart.TabIndex = 0;
-            this.Chart.Text = "chart1";
+            series1.Name = "bill";
+            this.Bieudongang.Series.Add(series1);
+            this.Bieudongang.Size = new System.Drawing.Size(422, 243);
+            this.Bieudongang.TabIndex = 0;
+            this.Bieudongang.Text = "chart1";
+            this.Bieudongang.Click += new System.EventHandler(this.Bieudongang_Click);
             // 
-            // chart2
+            // bieudotron
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.bieudotron.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(718, 289);
-            this.chart2.Name = "chart2";
+            this.bieudotron.Legends.Add(legend2);
+            this.bieudotron.Location = new System.Drawing.Point(718, 289);
+            this.bieudotron.Name = "bieudotron";
+            this.bieudotron.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.IsXValueIndexed = true;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(369, 243);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            this.bieudotron.Series.Add(series2);
+            this.bieudotron.Size = new System.Drawing.Size(369, 243);
+            this.bieudotron.TabIndex = 1;
+            this.bieudotron.Text = "chart2";
+            this.bieudotron.Click += new System.EventHandler(this.chart2_Click);
             // 
             // panel1
             // 
@@ -168,6 +172,26 @@
             this.panel1.Size = new System.Drawing.Size(240, 555);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.Location = new System.Drawing.Point(68, 65);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(169, 37);
+            this.btnTaiKhoan.TabIndex = 15;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox14.Image = global::WindowsFormsApp1.Properties.Resources.dashboard;
+            this.pictureBox14.Location = new System.Drawing.Point(3, 65);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(59, 38);
+            this.pictureBox14.TabIndex = 14;
+            this.pictureBox14.TabStop = false;
             // 
             // btnBaoCao
             // 
@@ -574,31 +598,22 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Đây là Ngày Tháng";
             // 
-            // btnTaiKhoan
+            // btn_Load
             // 
-            this.btnTaiKhoan.Location = new System.Drawing.Point(68, 65);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(169, 37);
-            this.btnTaiKhoan.TabIndex = 15;
-            this.btnTaiKhoan.Text = "Tài khoản";
-            this.btnTaiKhoan.UseVisualStyleBackColor = true;
-            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox14.Image = global::WindowsFormsApp1.Properties.Resources.dashboard;
-            this.pictureBox14.Location = new System.Drawing.Point(3, 65);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(59, 38);
-            this.pictureBox14.TabIndex = 14;
-            this.pictureBox14.TabStop = false;
+            this.btn_Load.Location = new System.Drawing.Point(551, 526);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(75, 23);
+            this.btn_Load.TabIndex = 12;
+            this.btn_Load.Text = "Load";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
             // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 561);
+            this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel6);
@@ -609,14 +624,15 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.Chart);
+            this.Controls.Add(this.bieudotron);
+            this.Controls.Add(this.Bieudongang);
             this.Name = "Trangchu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Trangchu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bieudongang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bieudotron)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -643,7 +659,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,8 +666,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart Chart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Bieudongang;
+        private System.Windows.Forms.DataVisualization.Charting.Chart bieudotron;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBaoCao;
@@ -697,5 +712,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Button btn_Load;
     }
 }

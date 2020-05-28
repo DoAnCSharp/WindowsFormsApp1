@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             ShowAccount();
             txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
             txtMa.Focus();
-           
+            con.Close();
 
         }
 
@@ -99,6 +99,7 @@ namespace WindowsFormsApp1
             ShowAccount();
             txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
             txtMa.Focus();
+            con.Close();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -117,6 +118,7 @@ namespace WindowsFormsApp1
             ShowAccount();
             txtMa.Text = txtTendangnhap.Text = txtMatkhau.Text = txtDienthoai.Text = txtEmail.Text = txtGhichu.Text = txtTrangthai.Text = "";
             txtMa.Focus();
+            con.Close();
 
         }
         private void btnTimkiem_Click(object sender, EventArgs e)
@@ -136,6 +138,7 @@ namespace WindowsFormsApp1
             DataTable dt = new DataTable();
             dt.Load(dr);
             dgvAccount.DataSource = dt;
+            con.Close();
         }
 
         private void dgvAccount_MouseClick(object sender, MouseEventArgs e)
@@ -149,7 +152,16 @@ namespace WindowsFormsApp1
             txtTrangthai.Text = dgvAccount.CurrentRow.Cells[6].Value.ToString();
 
         }
-        
+
+        private void dgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtMacantim_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

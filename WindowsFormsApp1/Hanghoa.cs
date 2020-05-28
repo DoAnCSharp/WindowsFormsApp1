@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace WindowsFormsApp1
     {
 
         List<Product> listProduct = new List<Product>();
+        private bool edit;
+
         public Hanghoa()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var m = new themMoiHangHoa();
+            var m = new themMoiHangHoa(this);
             m.Show();
             
         }
@@ -40,7 +43,16 @@ namespace WindowsFormsApp1
 
         private void Hanghoa_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = DataConnection.Connection;
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "select * from Product";
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter ta = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            ta.Fill(ds, "Product");
+            tbl_Product.DataSource = ds.Tables["Product"];
+            edit = true;
+            con.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,31 +61,11 @@ namespace WindowsFormsApp1
             m.Show();
         }
 
-        private void loadListVierHangHoa(List<Entities.Product> listItem)
-        {
-            listViewHangHoa.Clear();
-            List<string> columns = new List<string>();
-            listViewHangHoa.View = View.Details;
-            listViewHangHoa.Columns.Add("Mã hàng");
-            listViewHangHoa.Columns.Add("Tên hàng");
-            listViewHangHoa.Columns.Add("Giá bán");
-            listViewHangHoa.Columns.Add("Tồn kho");
-
-
-            foreach(Entities.Product pro in listItem)
-            {
-                ListViewItem item = new ListViewItem(Convert.ToString(pro.product_id));
-              //  item.Items.Add(Convert.ToString(pro.id_product));
-                item.SubItems.Add(Convert.ToString(pro.name));
-                item.SubItems.Add(Convert.ToString(pro.sale_Price));
-                item.SubItems.Add(Convert.ToString(pro.quantity));
-                listViewHangHoa.Items.Add(item);
-            }
-
-        }
+       
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+           
         }
     }
 }

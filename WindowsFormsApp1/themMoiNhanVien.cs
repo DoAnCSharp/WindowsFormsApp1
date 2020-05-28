@@ -41,5 +41,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void themMoiNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

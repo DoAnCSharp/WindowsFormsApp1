@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,14 @@ namespace WindowsFormsApp1
 {
     public partial class themMoiHangHoa : Form
     {
+        Hanghoa frmProduct;
         List<Object> listThuocTinh = new List<Object>();
         List<Object> listDonVi = new List<Object>();
+        private bool edit;
 
-        public themMoiHangHoa()
+        public themMoiHangHoa(Hanghoa frmProduct)
         {
+            this.frmProduct =frmProduct;
             InitializeComponent();
         }
 
@@ -59,7 +63,20 @@ namespace WindowsFormsApp1
         {
 
         }
+        public void ShowProduct()
+        {
+            SqlConnection con = DataConnection.Connection;
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "select * from Product";
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter ta = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            ta.Fill(ds, "Product");
+            frmProduct.tbl_Product.DataSource = ds.Tables["Product"];
+            edit = true;
+            con.Close();
 
+        }
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -72,7 +89,23 @@ namespace WindowsFormsApp1
 
         private void btnLuuThemHangHoa_Click(object sender, EventArgs e)
         {
+            SqlConnection con = DataConnection.Connection;
+            string sqlINSERT = "INSERT INTO Product (Product_Id,Category_Id,Name,Quantity,Unit,Price,Sale_Price,Note,Status,Img_Product) VALUES(@Product_Id,@Category_Id,@Name,@Quantity,@Unit,@Price,@Sale_Price,@Note,@Status,@Img_Product)";
+            SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+            cmd.Parameters.AddWithValue("Product_Id", txtMaHangHoa.Text);
+            cmd.Parameters.AddWithValue("Category_Id", cboNhomHang.Text);
+            cmd.Parameters.AddWithValue("Name", txtTenHang.Text);
+            cmd.Parameters.AddWithValue("Quantity", txtTonKho.Text);
+            cmd.Parameters.AddWithValue("Unit", cbo_Donvi.Text);
+            cmd.Parameters.AddWithValue("Price", txtGiaBan.Text);
+            cmd.Parameters.AddWithValue("Sale_Price", txtGiaBan.Text);
+            cmd.Parameters.AddWithValue("Note", txtTrongLuong.Text);
+            cmd.Parameters.AddWithValue("Status", txtTrongLuong.Text);
+            cmd.Parameters.AddWithValue("Img_Product", txtTrongLuong.Text);
 
+            cmd.ExecuteNonQuery();
+            ShowProduct();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,6 +130,11 @@ namespace WindowsFormsApp1
             listThuocTinh.Add(thuocTinh);
             listThuocTinh.Add(giaTri);
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

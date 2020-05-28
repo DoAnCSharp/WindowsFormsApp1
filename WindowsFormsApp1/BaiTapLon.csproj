@@ -118,6 +118,11 @@
     <Compile Include="Nhaphang.Designer.cs">
       <DependentUpon>Nhaphang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLHHVPPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Scheduler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +237,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLHHVPPDataSet.xsc">
+      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLHHVPPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHHVPPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHHVPPDataSet.xss">
+      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

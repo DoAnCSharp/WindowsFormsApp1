@@ -197,6 +197,7 @@
             this.tbl_Sup.Name = "tbl_Sup";
             this.tbl_Sup.Size = new System.Drawing.Size(563, 289);
             this.tbl_Sup.TabIndex = 28;
+            this.tbl_Sup.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_Sup_CellContentClick);
             // 
             // Nhacungcap
             // 

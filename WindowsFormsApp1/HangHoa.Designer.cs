@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnFind = new System.Windows.Forms.Button();
             this.btnExportHangHoa = new System.Windows.Forms.Button();
             this.btnImportHangHoa = new System.Windows.Forms.Button();
             this.btnThemHangHoa = new System.Windows.Forms.Button();
@@ -38,17 +39,15 @@
             this.btnThemNhomHang = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
-            this.listViewHangHoa = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
+            this.tbl_Product = new System.Windows.Forms.DataGridView();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Product)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnFind);
-            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.btnExportHangHoa);
             this.panel6.Controls.Add(this.btnImportHangHoa);
             this.panel6.Controls.Add(this.btnThemHangHoa);
@@ -58,6 +57,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(783, 38);
             this.panel6.TabIndex = 14;
+            // 
+            // btnFind
+            // 
+            this.btnFind.Location = new System.Drawing.Point(410, 9);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.TabIndex = 17;
+            this.btnFind.Text = "Tìm kiếm";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // btnExportHangHoa
             // 
@@ -145,40 +154,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhóm Hàng";
             // 
-            // listViewHangHoa
+            // tbl_Product
             // 
-            this.listViewHangHoa.HideSelection = false;
-            this.listViewHangHoa.Location = new System.Drawing.Point(204, 75);
-            this.listViewHangHoa.Name = "listViewHangHoa";
-            this.listViewHangHoa.Size = new System.Drawing.Size(567, 326);
-            this.listViewHangHoa.TabIndex = 16;
-            this.listViewHangHoa.UseCompatibleStateImageBehavior = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnFind
-            // 
-            this.btnFind.Location = new System.Drawing.Point(410, 9);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
-            this.btnFind.TabIndex = 17;
-            this.btnFind.Text = "Tìm kiếm";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.tbl_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_Product.Location = new System.Drawing.Point(189, 75);
+            this.tbl_Product.Name = "tbl_Product";
+            this.tbl_Product.Size = new System.Drawing.Size(599, 326);
+            this.tbl_Product.TabIndex = 17;
             // 
             // Hanghoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listViewHangHoa);
+            this.Controls.Add(this.tbl_Product);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Name = "Hanghoa";
@@ -188,6 +177,7 @@
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Product)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,8 +194,7 @@
         private System.Windows.Forms.Button btnThemNhomHang;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listViewHangHoa;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView tbl_Product;
     }
 }

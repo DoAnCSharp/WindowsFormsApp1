@@ -183,6 +183,7 @@
             this.dgvAccount.RowTemplate.Height = 24;
             this.dgvAccount.Size = new System.Drawing.Size(568, 122);
             this.dgvAccount.TabIndex = 23;
+            this.dgvAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellContentClick);
             this.dgvAccount.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAccount_MouseClick);
             // 
             // btnCapnhat
@@ -216,6 +217,7 @@
             this.txtMacantim.Name = "txtMacantim";
             this.txtMacantim.Size = new System.Drawing.Size(266, 20);
             this.txtMacantim.TabIndex = 17;
+            this.txtMacantim.TextChanged += new System.EventHandler(this.txtMacantim_TextChanged);
             // 
             // txtGhichu
             // 

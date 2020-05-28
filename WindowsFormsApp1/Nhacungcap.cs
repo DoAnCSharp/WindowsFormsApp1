@@ -50,5 +50,10 @@ namespace WindowsFormsApp1
             edit = true;
             con.Close();
         }
+
+        private void tbl_Sup_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

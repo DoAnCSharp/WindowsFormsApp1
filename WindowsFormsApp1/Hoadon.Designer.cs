@@ -34,7 +34,6 @@
             this.btnThemHoaDon = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,17 +50,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbl_Bill = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Bill)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tbl_Bill);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -119,15 +120,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Hóa Đơn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(213, 63);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(563, 523);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button2
             // 
@@ -280,6 +272,14 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
+            // tbl_Bill
+            // 
+            this.tbl_Bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_Bill.Location = new System.Drawing.Point(213, 63);
+            this.tbl_Bill.Name = "tbl_Bill";
+            this.tbl_Bill.Size = new System.Drawing.Size(560, 281);
+            this.tbl_Bill.TabIndex = 14;
+            // 
             // Hoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +288,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Hoadon";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Hoadon_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -297,6 +298,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Bill)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,7 +313,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnThemKenhBan;
@@ -326,5 +327,6 @@
         private System.Windows.Forms.Button btnThemHoaDon;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.DataGridView tbl_Bill;
     }
 }

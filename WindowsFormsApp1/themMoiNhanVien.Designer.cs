@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -67,24 +69,22 @@
             this.label33 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +95,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(806, 454);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Thêm mới nhân viên";
             // 
             // tabControl1
             // 
@@ -154,26 +163,23 @@
             this.tabPage1.Text = "Thông tin";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // button4
             // 
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.comboBox7);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.comboBox3);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(749, 338);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Thiết lập lương";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.button4.Location = new System.Drawing.Point(624, 294);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 76;
+            this.button4.Text = "Bỏ qua";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(521, 294);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 75;
+            this.button5.Text = "Lưu";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // comboBox4
             // 
@@ -470,56 +476,44 @@
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // tabPage2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kỳ hạn trả lương";
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.comboBox7);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(749, 338);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Thiết lập lương";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // comboBox1
+            // button3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(163, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.button3.Location = new System.Drawing.Point(615, 276);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Bỏ qua";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // button1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(518, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(443, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Phụ cấp";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(163, 91);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Lương chính";
+            this.button1.Location = new System.Drawing.Point(512, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Lưu";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // comboBox7
             // 
@@ -538,50 +532,56 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Giảm trừ";
             // 
-            // button1
+            // comboBox3
             // 
-            this.button1.Location = new System.Drawing.Point(512, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(163, 91);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 5;
             // 
-            // button3
+            // label3
             // 
-            this.button3.Location = new System.Drawing.Point(615, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Bỏ qua";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(73, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Lương chính";
             // 
-            // button4
+            // comboBox2
             // 
-            this.button4.Location = new System.Drawing.Point(624, 294);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 76;
-            this.button4.Text = "Bỏ qua";
-            this.button4.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(518, 40);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 3;
             // 
-            // button5
+            // label2
             // 
-            this.button5.Location = new System.Drawing.Point(521, 294);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 75;
-            this.button5.Text = "Lưu";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(443, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Phụ cấp";
             // 
-            // label5
+            // comboBox1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Thêm mới nhân viên";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(163, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(73, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kỳ hạn trả lương";
             // 
             // themMoiNhanVien
             // 
@@ -591,14 +591,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "themMoiNhanVien";
             this.Text = "nhanVien";
+            this.Load += new System.EventHandler(this.themMoiNhanVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
