@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.Bieudongang = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.bieudotron = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Chart_TopProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -56,7 +53,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Chart_revenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,10 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,15 +70,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btn_Load = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Bieudongang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bieudotron)).BeginInit();
+            this.lbl_Date = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_TopProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -95,59 +92,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_revenue)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Bieudongang
+            // Chart_TopProduct
             // 
             chartArea1.Name = "ChartArea1";
-            this.Bieudongang.ChartAreas.Add(chartArea1);
+            this.Chart_TopProduct.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.Bieudongang.Legends.Add(legend1);
-            this.Bieudongang.Location = new System.Drawing.Point(246, 289);
-            this.Bieudongang.Name = "Bieudongang";
-            this.Bieudongang.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.Chart_TopProduct.Legends.Add(legend1);
+            this.Chart_TopProduct.Location = new System.Drawing.Point(615, 58);
+            this.Chart_TopProduct.Name = "Chart_TopProduct";
+            this.Chart_TopProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.Legend = "Legend1";
-            series1.Name = "bill";
-            this.Bieudongang.Series.Add(series1);
-            this.Bieudongang.Size = new System.Drawing.Size(422, 243);
-            this.Bieudongang.TabIndex = 0;
-            this.Bieudongang.Text = "chart1";
-            this.Bieudongang.Click += new System.EventHandler(this.Bieudongang_Click);
-            // 
-            // bieudotron
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.bieudotron.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.bieudotron.Legends.Add(legend2);
-            this.bieudotron.Location = new System.Drawing.Point(718, 289);
-            this.bieudotron.Name = "bieudotron";
-            this.bieudotron.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.IsXValueIndexed = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.bieudotron.Series.Add(series2);
-            this.bieudotron.Size = new System.Drawing.Size(369, 243);
-            this.bieudotron.TabIndex = 1;
-            this.bieudotron.Text = "chart2";
-            this.bieudotron.Click += new System.EventHandler(this.chart2_Click);
+            series1.Name = "TopProduct";
+            this.Chart_TopProduct.Series.Add(series1);
+            this.Chart_TopProduct.Size = new System.Drawing.Size(568, 243);
+            this.Chart_TopProduct.TabIndex = 0;
+            this.Chart_TopProduct.Text = "chart1";
+            this.Chart_TopProduct.Click += new System.EventHandler(this.Bieudongang_Click);
             // 
             // panel1
             // 
@@ -201,6 +178,7 @@
             this.btnBaoCao.TabIndex = 13;
             this.btnBaoCao.Text = "Báo Cáo";
             this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnNhaCungCap
             // 
@@ -332,29 +310,29 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // chart1
+            // Chart_revenue
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(246, 99);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(301, 169);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.Chart_revenue.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.Chart_revenue.Legends.Add(legend2);
+            this.Chart_revenue.Location = new System.Drawing.Point(243, 327);
+            this.Chart_revenue.Name = "Chart_revenue";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "revenue";
+            this.Chart_revenue.Series.Add(series2);
+            this.Chart_revenue.Size = new System.Drawing.Size(933, 205);
+            this.Chart_revenue.TabIndex = 3;
+            this.Chart_revenue.Text = "chart1";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox8);
-            this.panel2.Location = new System.Drawing.Point(568, 99);
+            this.panel2.Location = new System.Drawing.Point(245, 76);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(165, 68);
             this.panel2.TabIndex = 4;
@@ -392,7 +370,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Location = new System.Drawing.Point(571, 186);
+            this.panel3.Location = new System.Drawing.Point(248, 163);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(162, 68);
             this.panel3.TabIndex = 5;
@@ -425,50 +403,12 @@
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Location = new System.Drawing.Point(754, 187);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(162, 68);
-            this.panel4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Đây là dữ liệu";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(92, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Nhân Viên";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox10.Image = global::WindowsFormsApp1.Properties.Resources.dashboard;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 15);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 38);
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.pictureBox11);
-            this.panel5.Location = new System.Drawing.Point(751, 100);
+            this.panel5.Location = new System.Drawing.Point(428, 77);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(165, 68);
             this.panel5.TabIndex = 6;
@@ -507,7 +447,7 @@
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.pictureBox12);
-            this.panel6.Location = new System.Drawing.Point(925, 187);
+            this.panel6.Location = new System.Drawing.Point(431, 253);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(162, 68);
             this.panel6.TabIndex = 9;
@@ -540,33 +480,64 @@
             this.pictureBox12.TabIndex = 1;
             this.pictureBox12.TabStop = false;
             // 
-            // panel7
+            // label13
             // 
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.pictureBox13);
-            this.panel7.Location = new System.Drawing.Point(922, 100);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(165, 68);
-            this.panel7.TabIndex = 8;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(287, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 25);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Dashboarh ";
             // 
-            // label11
+            // lbl_Date
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(82, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Đây là dữ liệu";
+            this.lbl_Date.AutoSize = true;
+            this.lbl_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Date.Location = new System.Drawing.Point(447, 12);
+            this.lbl_Date.Name = "lbl_Date";
+            this.lbl_Date.Size = new System.Drawing.Size(213, 25);
+            this.lbl_Date.TabIndex = 11;
+            this.lbl_Date.Text = "Đây là Ngày Tháng";
+            this.lbl_Date.Click += new System.EventHandler(this.label14_Click);
             // 
-            // label12
+            // pictureBox10
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(92, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 13);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Khách hàng";
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox10.Image = global::WindowsFormsApp1.Properties.Resources.dashboard;
+            this.pictureBox10.Location = new System.Drawing.Point(3, 15);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 38);
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(92, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Nhân Viên";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(82, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Đây là dữ liệu";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Location = new System.Drawing.Point(431, 164);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(162, 68);
+            this.panel4.TabIndex = 7;
             // 
             // pictureBox13
             // 
@@ -578,43 +549,53 @@
             this.pictureBox13.TabIndex = 1;
             this.pictureBox13.TabStop = false;
             // 
-            // label13
+            // label12
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(316, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 25);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Dashboarh ";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(92, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Khách hàng";
             // 
-            // label14
+            // label11
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(478, 31);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(213, 25);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Đây là Ngày Tháng";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(82, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Đây là dữ liệu";
             // 
-            // btn_Load
+            // panel7
             // 
-            this.btn_Load.Location = new System.Drawing.Point(551, 526);
-            this.btn_Load.Name = "btn_Load";
-            this.btn_Load.Size = new System.Drawing.Size(75, 23);
-            this.btn_Load.TabIndex = 12;
-            this.btn_Load.Text = "Load";
-            this.btn_Load.UseVisualStyleBackColor = true;
-            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.pictureBox13);
+            this.panel7.Location = new System.Drawing.Point(251, 247);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(165, 68);
+            this.panel7.TabIndex = 8;
+            // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 561);
-            this.Controls.Add(this.btn_Load);
-            this.Controls.Add(this.label14);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1195, 561);
+            this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel7);
@@ -622,15 +603,13 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.Chart_revenue);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bieudotron);
-            this.Controls.Add(this.Bieudongang);
+            this.Controls.Add(this.Chart_TopProduct);
             this.Name = "Trangchu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Trangchu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Bieudongang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bieudotron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_TopProduct)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -640,25 +619,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_revenue)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,8 +645,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart Bieudongang;
-        private System.Windows.Forms.DataVisualization.Charting.Chart bieudotron;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Chart_TopProduct;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBaoCao;
@@ -683,7 +661,7 @@
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnDashBoard;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Chart_revenue;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -692,10 +670,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -704,14 +678,19 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_Date;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Button btn_Load;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
