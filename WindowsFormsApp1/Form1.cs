@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             DataSet ds = new DataSet();
             ta.Fill(ds, "Bill");
             dataGridView1.DataSource = ds.Tables["Bill"];
-            edit = true;
             con.Close();
         }
 

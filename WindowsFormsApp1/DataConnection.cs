@@ -12,9 +12,9 @@ namespace WindowsFormsApp1
         public static string ConnectionString
         {
             //Ket noi database may chiep
-            get { return @"Data Source=LAB06_PC08;Initial Catalog=QLHHVPP;Persist Security Info=True;User ID=sa;Password =1234$;"; }
+            //get { return @"Data Source=LAB06_PC08;Initial Catalog=QLHHVPP;Persist Security Info=True;User ID=sa;Password =1234$;"; }
             //Ket noi database may Khanh
-            //get { return @"Data Source=DESKTOP-PK90Q13\SQLEXPRESS;Initial Catalog=QLHHVPP;Persist Security Info=True;User ID=sa;Password =1234$;"; }
+            get { return @"Data Source=DESKTOP-PK90Q13\SQLEXPRESS;Initial Catalog=QLHHVPP;Persist Security Info=True;User ID=sa;Password =1234$;"; }
             // Ket noi database may Trong
             // get { return @"Data Source=DESKTOP-0GHN5JC\SQLEXPRESS;Initial Catalog=QLHHVPP;Persist Security Info=True;User ID=sa;Password = 1a;"; }
         }
