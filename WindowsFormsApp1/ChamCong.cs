@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         }
 
         private void ChamCong_Load(object sender, EventArgs e)
-        {
+        {   
 
             DataTable dt = new DataTable();
             SqlConnection con = DataConnection.Connection;

@@ -608,6 +608,7 @@
             this.Controls.Add(this.Chart_TopProduct);
             this.Name = "Trangchu";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Trangchu_FormClosed);
             this.Load += new System.EventHandler(this.Trangchu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Chart_TopProduct)).EndInit();
             this.panel1.ResumeLayout(false);

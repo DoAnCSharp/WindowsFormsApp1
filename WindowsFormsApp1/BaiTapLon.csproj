@@ -66,6 +66,12 @@
     <Compile Include="Banhang.Designer.cs">
       <DependentUpon>Banhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong.Designer.cs">
+      <DependentUpon>ChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\ProductDAO.cs" />
     <Compile Include="Controller\ProductCtrl.cs" />
     <Compile Include="DataConnection.cs" />
@@ -86,12 +92,6 @@
     </Compile>
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddnewusers.cs">
       <SubType>Form</SubType>
@@ -129,11 +129,6 @@
     </Compile>
     <Compile Include="Nhaphang.Designer.cs">
       <DependentUpon>Nhaphang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLHHVPPDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Scheduler.cs">
       <SubType>Form</SubType>
@@ -185,14 +180,17 @@
     <Compile Include="Trangchu.designer.cs">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Đăng nhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng nhập.designer.cs">
+      <DependentUpon>Đăng nhập.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Banhang.resx">
       <DependentUpon>Banhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hanghoa.resx">
       <DependentUpon>Hanghoa.cs</DependentUpon>
@@ -245,6 +243,9 @@
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Đăng nhập.resx">
+      <DependentUpon>Đăng nhập.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Bill.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Controller.ProductCtrl.datasource" />
@@ -275,17 +276,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLHHVPPDataSet.xsc">
-      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLHHVPPDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLHHVPPDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLHHVPPDataSet.xss">
-      <DependentUpon>QLHHVPPDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

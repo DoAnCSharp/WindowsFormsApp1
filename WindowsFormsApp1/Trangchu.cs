@@ -13,10 +13,11 @@ namespace WindowsFormsApp1
 {
     public partial class Trangchu : Form
     {
-
-        public Trangchu()
+        Form DangNhap;
+        public Trangchu(Form DangNhap)
         {
             InitializeComponent();
+            this.DangNhap = DangNhap;
 
         }
 
@@ -177,6 +178,11 @@ namespace WindowsFormsApp1
         {
             var m = new Bill();
             m.Show();
+        }
+
+        private void Trangchu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DangNhap.Show();
         }
     }
 }
