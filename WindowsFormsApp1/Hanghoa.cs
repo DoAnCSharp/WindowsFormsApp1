@@ -67,10 +67,5 @@ namespace WindowsFormsApp1
         {
            
         }
-
-        private void tbl_Product_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

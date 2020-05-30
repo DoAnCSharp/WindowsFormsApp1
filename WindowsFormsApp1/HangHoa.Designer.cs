@@ -161,7 +161,6 @@
             this.tbl_Product.Name = "tbl_Product";
             this.tbl_Product.Size = new System.Drawing.Size(599, 326);
             this.tbl_Product.TabIndex = 17;
-            this.tbl_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_Product_CellContentClick);
             // 
             // Hanghoa
             // 
