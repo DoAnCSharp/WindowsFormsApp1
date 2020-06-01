@@ -62,22 +62,22 @@
             this.txtDiscount = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblTienThua = new System.Windows.Forms.Label();
             this.lblKhachCanTra = new System.Windows.Forms.Label();
             this.lblGiamThanhToan = new System.Windows.Forms.Label();
             this.lblTongThanhToan = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtKhachThanhToan = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.giảm = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tb = new System.Windows.Forms.TabControl();
             this.lblTonKho = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblTienThua = new System.Windows.Forms.Label();
-            this.txtKhachThanhToan = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anhProduct)).BeginInit();
@@ -409,6 +409,15 @@
             this.tabPage1.Text = "Hóa đơn";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblTienThua
+            // 
+            this.lblTienThua.AutoSize = true;
+            this.lblTienThua.Location = new System.Drawing.Point(139, 150);
+            this.lblTienThua.Name = "lblTienThua";
+            this.lblTienThua.Size = new System.Drawing.Size(13, 13);
+            this.lblTienThua.TabIndex = 18;
+            this.lblTienThua.Text = "0";
+            // 
             // lblKhachCanTra
             // 
             this.lblKhachCanTra.AutoSize = true;
@@ -464,6 +473,34 @@
             this.txtGhiChu.TabIndex = 12;
             this.txtGhiChu.Enter += new System.EventHandler(this.txtGhiChu_Enter);
             this.txtGhiChu.Leave += new System.EventHandler(this.txtGhiChu_Leave);
+            // 
+            // txtKhachThanhToan
+            // 
+            this.txtKhachThanhToan.Location = new System.Drawing.Point(142, 110);
+            this.txtKhachThanhToan.Name = "txtKhachThanhToan";
+            this.txtKhachThanhToan.Size = new System.Drawing.Size(100, 20);
+            this.txtKhachThanhToan.TabIndex = 10;
+            this.txtKhachThanhToan.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txtKhachThanhToan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhachThanhToan_KeyPress);
+            this.txtKhachThanhToan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhachThanhToan_KeyUp);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Còn nợ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Tiền trả";
             // 
             // label5
             // 
@@ -521,41 +558,6 @@
             this.label8.TabIndex = 43;
             this.label8.Text = "Tồn kho";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Còn nợ";
-            // 
-            // lblTienThua
-            // 
-            this.lblTienThua.AutoSize = true;
-            this.lblTienThua.Location = new System.Drawing.Point(139, 150);
-            this.lblTienThua.Name = "lblTienThua";
-            this.lblTienThua.Size = new System.Drawing.Size(13, 13);
-            this.lblTienThua.TabIndex = 18;
-            this.lblTienThua.Text = "0";
-            // 
-            // txtKhachThanhToan
-            // 
-            this.txtKhachThanhToan.Location = new System.Drawing.Point(142, 110);
-            this.txtKhachThanhToan.Name = "txtKhachThanhToan";
-            this.txtKhachThanhToan.Size = new System.Drawing.Size(100, 20);
-            this.txtKhachThanhToan.TabIndex = 10;
-            this.txtKhachThanhToan.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Tiền trả";
             // 
             // lblPrice
             // 

@@ -439,7 +439,7 @@
             // lblGiamThanhToan
             // 
             this.lblGiamThanhToan.AutoSize = true;
-            this.lblGiamThanhToan.Location = new System.Drawing.Point(142, 35);
+            this.lblGiamThanhToan.Location = new System.Drawing.Point(139, 35);
             this.lblGiamThanhToan.Name = "lblGiamThanhToan";
             this.lblGiamThanhToan.Size = new System.Drawing.Size(13, 13);
             this.lblGiamThanhToan.TabIndex = 16;
@@ -490,6 +490,8 @@
             this.txtKhachThanhToan.Size = new System.Drawing.Size(100, 20);
             this.txtKhachThanhToan.TabIndex = 10;
             this.txtKhachThanhToan.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txtKhachThanhToan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhachThanhToan_KeyPress);
+            this.txtKhachThanhToan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhachThanhToan_KeyUp);
             // 
             // label7
             // 

@@ -438,5 +438,38 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void txtKhachThanhToan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtKhachThanhToan_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (lblKhachCanTra.Text != null && Convert.ToDouble(lblKhachCanTra.Text) > 0)
+            {
+                if (!String.IsNullOrEmpty(txtKhachThanhToan.Text))
+                {
+                    if (Convert.ToDouble(txtKhachThanhToan.Text) > 0)
+                    {
+
+                        double khachdua = Convert.ToDouble(txtKhachThanhToan.Text);
+                        double cantra = Convert.ToDouble(lblKhachCanTra.Text);
+                        lblTienThua.Text = (khachdua - cantra).ToString();
+                    }
+                }
+                else txtKhachThanhToan.Text = "0";
+            }
+        }
     }
 }

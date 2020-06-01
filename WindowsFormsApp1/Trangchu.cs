@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
-            var m = new Bill();
+            var m = new frmDatlich();
             m.Show();
         }
 

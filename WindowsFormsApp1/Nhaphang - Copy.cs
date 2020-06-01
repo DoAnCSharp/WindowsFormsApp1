@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         List<Customer> listCustomer = new List<Customer>();
         List<Import_Detail> listBill_Detail = new List<Import_Detail>();
         List<Employee> listEmployee = new List<Employee>();
-        Bill_Detail selectedBD { get; set; }
+        Import_Detail selectedBD { get; set; }
         Account currentAccount { get; set; }
         int bill_id { get; set; }
         double khachcantra { get; set; }
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             SqlCommand cmd = new SqlCommand(sqlBill_Id, con);
             bill_id = (Int32)cmd.ExecuteScalar();
             lblBill_Id.Text = "Mã phiếu nhập : " + bill_id;
-
+            
             string sqlNhanVien = "select Emp_Id, Name from Employee";
             cmd = new SqlCommand(sqlNhanVien, con);
             cmd.CommandType = CommandType.Text;
@@ -330,7 +330,7 @@ namespace WindowsFormsApp1
         {
             if (bangChiTietHoaDon.RowCount > 0)
             {
-                selectedBD = (Bill_Detail)bangChiTietHoaDon.CurrentRow.DataBoundItem;
+                selectedBD = (Import_Detail)bangChiTietHoaDon.CurrentRow.DataBoundItem;
                 cboTenHang.SelectedIndex = selectedBD.select_idx;
                 txtDiscount.Value = selectedBD.discount;
                 txtSoLuong.Value = selectedBD.quantity;
@@ -435,6 +435,38 @@ namespace WindowsFormsApp1
         private void label4_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtKhachThanhToan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+       (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtKhachThanhToan_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (lblKhachCanTra.Text != null &&Convert.ToDouble(lblKhachCanTra.Text) > 0 )
+            {
+                if (!String.IsNullOrEmpty(txtKhachThanhToan.Text))
+                {
+                    if(Convert.ToDouble(txtKhachThanhToan.Text) > 0)
+                    {
+
+                        double khachdua = Convert.ToDouble(txtKhachThanhToan.Text);
+                        double cantra = Convert.ToDouble(lblKhachCanTra.Text);
+                        lblTienThua.Text = (khachdua - cantra).ToString();
+                    }
+                } else txtKhachThanhToan.Text = "0"; 
+            }
         }
     }
 }

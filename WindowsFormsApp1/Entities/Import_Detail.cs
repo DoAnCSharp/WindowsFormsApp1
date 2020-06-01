@@ -28,6 +28,7 @@ namespace WindowsFormsApp1.Entities
             this.product_name = product_name;
             this.category_id = category_id;
             this.select_idx = select_idx;
+            this.total = total;
         }
     }
 }
