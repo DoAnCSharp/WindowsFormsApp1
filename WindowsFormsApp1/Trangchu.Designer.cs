@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Chart_TopProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
@@ -82,6 +82,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblHello = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_TopProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -109,18 +110,18 @@
             // 
             // Chart_TopProduct
             // 
-            chartArea1.Name = "ChartArea1";
-            this.Chart_TopProduct.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Chart_TopProduct.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.Chart_TopProduct.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.Chart_TopProduct.Legends.Add(legend3);
             this.Chart_TopProduct.Location = new System.Drawing.Point(615, 58);
             this.Chart_TopProduct.Name = "Chart_TopProduct";
             this.Chart_TopProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Legend = "Legend1";
-            series1.Name = "TopProduct";
-            this.Chart_TopProduct.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series3.Legend = "Legend1";
+            series3.Name = "TopProduct";
+            this.Chart_TopProduct.Series.Add(series3);
             this.Chart_TopProduct.Size = new System.Drawing.Size(568, 243);
             this.Chart_TopProduct.TabIndex = 0;
             this.Chart_TopProduct.Text = "chart1";
@@ -206,7 +207,7 @@
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(169, 37);
             this.btnHoaDon.TabIndex = 10;
-            this.btnHoaDon.Text = "Hóa Đơn";
+            this.btnHoaDon.Text = "Bán hàng";
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
@@ -276,7 +277,7 @@
             this.btnBanHang.Name = "btnBanHang";
             this.btnBanHang.Size = new System.Drawing.Size(169, 37);
             this.btnBanHang.TabIndex = 3;
-            this.btnBanHang.Text = "Bán hàng";
+            this.btnBanHang.Text = "Nhập hàng";
             this.btnBanHang.UseVisualStyleBackColor = true;
             this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
@@ -312,17 +313,17 @@
             // 
             // Chart_revenue
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Chart_revenue.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Chart_revenue.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.Chart_revenue.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.Chart_revenue.Legends.Add(legend4);
             this.Chart_revenue.Location = new System.Drawing.Point(243, 327);
             this.Chart_revenue.Name = "Chart_revenue";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "revenue";
-            this.Chart_revenue.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "revenue";
+            this.Chart_revenue.Series.Add(series4);
             this.Chart_revenue.Size = new System.Drawing.Size(933, 205);
             this.Chart_revenue.TabIndex = 3;
             this.Chart_revenue.Text = "chart1";
@@ -589,12 +590,23 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblHello
+            // 
+            this.lblHello.AutoSize = true;
+            this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.Location = new System.Drawing.Point(1037, 21);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(81, 24);
+            this.lblHello.TabIndex = 12;
+            this.lblHello.Text = "lblHello";
+            // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1195, 561);
+            this.Controls.Add(this.lblHello);
             this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel6);
@@ -693,5 +705,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblHello;
     }
 }

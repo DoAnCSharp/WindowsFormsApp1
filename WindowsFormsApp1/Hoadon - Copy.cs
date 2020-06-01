@@ -12,12 +12,12 @@ using WindowsFormsApp1.Entities;
 
 namespace WindowsFormsApp1
 {
-    public partial class Hoadon : Form
+    public partial class Hoadonnhap : Form
     {
         private bool edit;
         public Account curentAccount { get; set; }
 
-        public Hoadon(Account curentAccount)
+        public Hoadonnhap(Account curentAccount)
         {
             InitializeComponent();
             this.curentAccount = curentAccount;
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         private void btnThemHoaDon_Click(object sender, EventArgs e)
         {
-            var m = new Banhang(this);
+            var m = new Nhaphang1(this);
             m.Show();
         }
 
@@ -43,12 +43,12 @@ namespace WindowsFormsApp1
         {
             SqlConnection con = DataConnection.Connection;
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandText = "select * from Bill";
+            cmd.CommandText = "select * from Import_Bill";
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter ta = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            ta.Fill(ds, "Bill");
-            tbl_Bill.DataSource = ds.Tables["Bill"];
+            ta.Fill(ds, "Import_Bill");
+            tbl_Bill.DataSource = ds.Tables["Import_Bill"];
             edit = true;
             con.Close();
         }

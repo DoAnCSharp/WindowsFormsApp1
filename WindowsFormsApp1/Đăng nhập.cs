@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
+using WindowsFormsApp1.Entities;
 
 namespace WindowsFormsApp1
 {
     public partial class frmDangnhap : Form
     {
-        
         public frmDangnhap()
         {
             InitializeComponent();
@@ -44,7 +44,8 @@ namespace WindowsFormsApp1
                     SqlDataReader dt = cmd.ExecuteReader();
                     if (dt.Read() == true)
                     {
-                        var m = new Trangchu(this);
+                        Account acc = new Account(dt.GetInt32(0), dt.GetString(1), dt.GetString(2), dt.GetString(3), dt.GetString(4), dt.GetString(5), dt.GetString(6));
+                        var m = new Trangchu(this, acc);
                         m.Show();
                         this.Hide();
                     }

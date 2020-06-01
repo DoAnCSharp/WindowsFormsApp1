@@ -60,6 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hoadon - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoadon - Copy.Designer.cs">
+      <DependentUpon>Hoadon - Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhaphang - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhaphang - Copy.Designer.cs">
+      <DependentUpon>Nhaphang - Copy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Banhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     <Compile Include="Đăng nhập.designer.cs">
       <DependentUpon>Đăng nhập.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Hoadon - Copy.resx">
+      <DependentUpon>Hoadon - Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhaphang - Copy.resx">
+      <DependentUpon>Nhaphang - Copy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banhang.resx">
       <DependentUpon>Banhang.cs</DependentUpon>
     </EmbeddedResource>

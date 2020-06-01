@@ -13,24 +13,24 @@ using WindowsFormsApp1.Entities;
 
 namespace WindowsFormsApp1
 {
-    public partial class Banhang : Form
+    public partial class Nhaphang1 : Form
     {
         List<Customer> listCustomer = new List<Customer>();
-        List<Bill_Detail> listBill_Detail = new List<Bill_Detail>();
+        List<Import_Detail> listBill_Detail = new List<Import_Detail>();
         List<Employee> listEmployee = new List<Employee>();
         Bill_Detail selectedBD { get; set; }
-        Account curentAccount;
+        Account currentAccount { get; set; }
         int bill_id { get; set; }
         double khachcantra { get; set; }
         double tongthanhtoan { get; set; }
         int maNhanVien { get; set; }
         int maKhach { get; set; }
         string today { get; set; }
-        public Banhang(Hoadon hoadon)
+        public Nhaphang1(Hoadonnhap hoadon)
         {
             InitializeComponent();
             this.cboAn.TextChanged += new System.EventHandler(this.cboAn_TextChanged);
-            this.curentAccount = hoadon.curentAccount;
+            this.currentAccount = hoadon.curentAccount;
         }
         class SanPham
         {
@@ -47,11 +47,10 @@ namespace WindowsFormsApp1
         } 
 
 
-        public Banhang(Account curentAccount)
+        public Nhaphang1()
         {
             InitializeComponent();
             this.cboAn.TextChanged += new System.EventHandler(this.cboAn_TextChanged);
-            this.curentAccount = curentAccount;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,12 +109,12 @@ namespace WindowsFormsApp1
 
             SqlConnection con = DataConnection.Connection;
 
-            string sqlBill_Id = "select max(Bill_Id)+1 from Bill";
+            string sqlBill_Id = "select max(Import_Id)+1 from Import_Bill";
             SqlCommand cmd = new SqlCommand(sqlBill_Id, con);
             bill_id = (Int32)cmd.ExecuteScalar();
-            lblBill_Id.Text = "Mã hóa đơn : " + bill_id;
+            lblBill_Id.Text = "Mã phiếu nhập : " + bill_id;
 
-            string sqlNhanVien = "select Emp_Id, Name from Employee ";
+            string sqlNhanVien = "select Emp_Id, Name from Employee";
             cmd = new SqlCommand(sqlNhanVien, con);
             cmd.CommandType = CommandType.Text;
             SqlDataReader dr = cmd.ExecuteReader();
@@ -125,14 +124,14 @@ namespace WindowsFormsApp1
             cboNhanVien.ValueMember = "Emp_Id";
             cboNhanVien.DataSource = dt;
 
-            string sqlKhachHang = "select Customer_Id, Name from Customer";
+            string sqlKhachHang = "select Supplier_Id, Name from Supplier";
             cmd = new SqlCommand(sqlKhachHang, con);
             cmd.CommandType = CommandType.Text;
             SqlDataReader dr2 = cmd.ExecuteReader();
             DataTable dt2 = new DataTable();
             dt2.Load(dr2);
             cboKhachHang.DisplayMember = "Name";
-            cboKhachHang.ValueMember = "Customer_Id";
+            cboKhachHang.ValueMember = "Supplier_Id";
             cboKhachHang.DataSource = dt2;
 
             cboChannel.SelectedIndex = 0;
@@ -205,10 +204,10 @@ namespace WindowsFormsApp1
             bangChiTietHoaDon.DataSource = new System.Windows.Forms.BindingSource { DataSource = listBill_Detail };
             bangChiTietHoaDon.Columns.Remove("product_id");
             bangChiTietHoaDon.Columns.Remove("category_id");
-            bangChiTietHoaDon.Columns.Remove("bill_id");
+            bangChiTietHoaDon.Columns.Remove("import_id");
             bangChiTietHoaDon.Columns.Remove("select_idx");
 
-            foreach (Bill_Detail bd in listBill_Detail)
+            foreach (Import_Detail bd in listBill_Detail)
             {
                 khachcantra += bd.total;
                 tongthanhtoan += bd.quantity * bd.price;
@@ -244,26 +243,26 @@ namespace WindowsFormsApp1
             int tonKho = Convert.ToInt32(lblTonKho.Text);
 
             double total = price * quantity * (100 - discount) / 100;
-            if(tonKho - quantity < 0)
+            /*if(tonKho - quantity < 0)
             {
                 MessageBox.Show("Kho không đủ hàng!", "Lỗi");
             }
-            else if (category_id != null && product_id != null && quantity >0 && price != null)
+            else*/ if (category_id != null && product_id != null && quantity >0 && price != null)
             {
-                Bill_Detail detail = new Bill_Detail(quantity,bill_id, product_id, price, discount, category_id, product_name, total, select_idx);
+                Import_Detail detail = new Import_Detail(quantity,bill_id, product_id, price, discount, category_id, product_name, total, select_idx);
                 // bangChiTietHoaDon.Rows.Add(bangChiTietHoaDon.RowCount, cboTenHang.Text, quantity, price, discount, price*quantity*(100-discount)/100);
                 
                 bool add = true;
-                foreach(Bill_Detail bd in listBill_Detail)
+                foreach(Import_Detail bd in listBill_Detail)
                 {
                     if(category_id == bd.category_id && product_id == bd.product_id)
                     {
                         add = false;
-                        if((tonKho - bd.quantity - quantity) < 0)
+                        /*if((tonKho - bd.quantity - quantity) < 0)
                         {
                             MessageBox.Show("Kho không đủ hàng!", "Lỗi");
                             break;
-                        }
+                        }*/
                         bd.quantity += quantity;
                         bd.discount = discount;
                         bd.total = bd.price * bd.quantity * (100 - bd.discount) / 100;
@@ -307,14 +306,14 @@ namespace WindowsFormsApp1
             double price = Convert.ToDouble(lblPrice.Text);
             int tonKho = Convert.ToInt32(lblTonKho.Text);
             double total = price * quantity * (100 - discount) / 100;
-            if (tonKho - quantity < 0)
+           /* if (tonKho - quantity < 0)
             {
                 MessageBox.Show("Kho không đủ hàng!", "Lỗi");
             }
-            else if (category_id != null && product_id != null && quantity > 0 && price != null && selectedBD != null)
+            else*/ if (category_id != null && product_id != null && quantity > 0 && price != null && selectedBD != null)
             {
                 // bangChiTietHoaDon.Rows.Add(bangChiTietHoaDon.RowCount, cboTenHang.Text, quantity, price, discount, price*quantity*(100-discount)/100);
-                foreach (Bill_Detail bd in listBill_Detail)
+                foreach (Import_Detail bd in listBill_Detail)
                 {
                     if (category_id == bd.category_id && product_id == bd.product_id)
                     {
@@ -346,7 +345,7 @@ namespace WindowsFormsApp1
             if (category_id != null && product_id != null && selectedBD != null)
             {
                 // bangChiTietHoaDon.Rows.Add(bangChiTietHoaDon.RowCount, cboTenHang.Text, quantity, price, discount, price*quantity*(100-discount)/100);
-                foreach (Bill_Detail bd in listBill_Detail)
+                foreach (Import_Detail bd in listBill_Detail)
                 {
                     if (category_id == bd.category_id && product_id == bd.product_id)
                     {
@@ -366,27 +365,27 @@ namespace WindowsFormsApp1
             else
             {
                 SqlConnection con = DataConnection.Connection;
-                string sqlINSERT = "INSERT INTO Bill(Bill_Id, Create_date, Update_date, Customer_Id, Emp_Id, Sale_Channel, Total_Money, Debt, Status, Note)";
-                sqlINSERT += " VALUES (@Bill_Id, @Create_date, @Update_date, @Customer_Id, @Emp_Id, @Sale_Channel, @Total_Money, @Debt, @Status, @Note)";
+                string sqlINSERT = "INSERT INTO Import_Bill(Import_Id, Create_date, Update_date, Supplier_Id, Emp_Id, Total_Money, Debt, Status, Note)";
+                sqlINSERT += " VALUES (@Import_Id, @Create_date, @Update_date, @Supplier_Id, @Emp_Id, @Total_Money, @Debt, @Status, @Note)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
-                cmd.Parameters.AddWithValue("Bill_Id", bill_id);
+                cmd.Parameters.AddWithValue("Import_Id", bill_id);
                 cmd.Parameters.AddWithValue("Create_date", "05 - 19 - 2020 20:05");
                 cmd.Parameters.AddWithValue("Update_date", "05 - 19 - 2020 20:05");
-                cmd.Parameters.AddWithValue("Customer_Id", maKhach);
+                cmd.Parameters.AddWithValue("Supplier_Id", maKhach);
                 cmd.Parameters.AddWithValue("Emp_Id", maNhanVien);
-                cmd.Parameters.AddWithValue("Sale_Channel", cboChannel.Text);
+                /*cmd.Parameters.AddWithValue("Sale_Channel", cboChannel.Text);*/
                 cmd.Parameters.AddWithValue("Total_Money", khachcantra);
-                cmd.Parameters.AddWithValue("Debt", 0);
-                cmd.Parameters.AddWithValue("Status", "Hoàn thành");
+                cmd.Parameters.AddWithValue("Debt", Convert.ToDouble(lblTienThua.Text));
+                cmd.Parameters.AddWithValue("Status", "Đã nhập hàng");
                 cmd.Parameters.AddWithValue("Note", txtGhiChu.Text);
                 cmd.ExecuteNonQuery();
 
-                foreach(Bill_Detail bd in listBill_Detail)
+                foreach(Import_Detail bd in listBill_Detail)
                 {
-                    sqlINSERT = "INSERT INTO Bill_Detail(Bill_Id, Product_Id, Category_Id, Price, Quantity, Discount)";
-                    sqlINSERT += " VALUES (@Bill_Id, @Product_Id, @Category_Id, @Price, @Quantity, @Discount)";
+                    sqlINSERT = "INSERT INTO Import_Detail(Import_Id, Product_Id, Category_Id, Price, Quantity, Discount)";
+                    sqlINSERT += " VALUES (@Import_Id, @Product_Id, @Category_Id, @Price, @Quantity, @Discount)";
                     cmd = new SqlCommand(sqlINSERT, con);
-                    cmd.Parameters.AddWithValue("Bill_Id", bill_id);
+                    cmd.Parameters.AddWithValue("Import_Id", bill_id);
                     cmd.Parameters.AddWithValue("Product_Id", bd.product_id);
                     cmd.Parameters.AddWithValue("Category_Id", bd.category_id);
                     cmd.Parameters.AddWithValue("Price", bd.price);
@@ -395,7 +394,7 @@ namespace WindowsFormsApp1
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
-                MessageBox.Show("Thanh toán thành công", "Thông báo");
+                MessageBox.Show("Nhập hàng thành công", "Thông báo");
                 this.Close();
             }
         }

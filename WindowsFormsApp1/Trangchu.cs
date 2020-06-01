@@ -9,15 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
+using WindowsFormsApp1.Entities;
+
 namespace WindowsFormsApp1
 {
     public partial class Trangchu : Form
     {
         Form DangNhap;
-        public Trangchu(Form DangNhap)
+        Account currentAcc;
+        public Trangchu(Form DangNhap, Account currentAcc)
         {
             InitializeComponent();
             this.DangNhap = DangNhap;
+            this.currentAcc = currentAcc;
+            lblHello.Text = "Chào " + currentAcc.username + "!";
 
         }
 
@@ -97,7 +102,7 @@ namespace WindowsFormsApp1
         private void btnBanHang_Click(object sender, EventArgs e)
         {
 
-            var m = new Banhang();
+            var m = new Hoadonnhap(currentAcc);
             m.Show();
         }
 
@@ -110,7 +115,7 @@ namespace WindowsFormsApp1
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
 
-            var m = new Hoadon();
+            var m = new Hoadon(currentAcc);
             m.Show();
         }
 
