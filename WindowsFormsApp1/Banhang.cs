@@ -161,6 +161,7 @@ namespace WindowsFormsApp1
             cboNhanVien.AutoCompleteSource = AutoCompleteSource.ListItems;
             cboKhachHang.AutoCompleteMode = AutoCompleteMode.Suggest;
             cboKhachHang.AutoCompleteSource = AutoCompleteSource.ListItems;
+            
             // cboMaHang.ValueMember = "Emp_Id";
             //cboTenHang.ValueMember = "Emp_Id";
             con.Close();
